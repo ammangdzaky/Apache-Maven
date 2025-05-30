@@ -1,0 +1,11 @@
+DEPENDENCY MANAGEMENT
+    - Saat project kita sudah besar, kadang kita seering menggunakan banyak dependency
+    - Masalah dengan banyaknya dependency adalah, jika kita salah menggunakan dependeny yang sama namun versinya berbeda-beda
+    - Maven mendukung fitur dependency management, dimana kita bisa memasukkan daftar dependency di parent module beserta versinya,
+    lalu menambahkan dependency tersebut di module tanpa harus menggunakan versinya
+    - Secara otomatis versi dependency akan sama dengan yang ada di dependency management di parent module
+
+    - Perbedaan <dependencies> dan <dependencyManagement>
+    <dependecies>           -> semua module akan include dengan semua dependency yang ada di parent (lihat gambar)
+    <dependecyManagement>   -> module hanay include yang diinginkannya, lebih bagus karena misal ada module yang tidak membutuhkan dependency tertentu
+                                maka dia tidak akan menggunakannya (lihat gambar)
