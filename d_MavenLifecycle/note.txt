@@ -1,0 +1,13 @@
+LIFECYCLE
+    - Maven bekerja dalam konsep lifecycle
+    - Untuk menjalankan lifecycle, kita bisa menggunakan perintah : mvn namalifecycle
+    - lifecycle akan menjalankan banyak plugin, entah bawaan maven, atau bisa kita tambahkan plugin lain jika mau
+
+CONTOH LIFECYCLE
+    - clean         : menghapus folder target (tempat menyimpan hasil kompilasi)
+    - compile       : melakukan kompilasi source code project
+    - test-compile  : untuk melakukan kompilasi source code project
+    - test          : untuk menjalankan unit test
+    - package       : untuk membuat distribusi file aplikasi
+    - install       : untuk menginstall project ke local reposiroty, sehingga bisa digunakan di porject lain di local
+    - deploy        : deploy project ke remote repository di server

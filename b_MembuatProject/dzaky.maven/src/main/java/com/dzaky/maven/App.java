@@ -1,4 +1,4 @@
-package dzaky.maven;
+package com.dzaky.maven;
 
 /**
  * Hello world!
