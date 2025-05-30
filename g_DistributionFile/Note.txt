@@ -1,0 +1,44 @@
+MEMBUAT DISTRIBUTION FILE
+    - Secara default, maven mendukung pembuatan distribution file menggunakan lifecycle package
+    - Hanya saja, hasil distributin file nya berupa file jar yang berisikan binary code dari project kita
+    - Dependency lainnya tidak dimasukkan, sehingga tidak bisa langsung dijalankan
+
+
+MENGGUNAKAN ASSEMBLY PLUGIN
+    - Salah satu yang bisa kita gunakan untuk membuat distribution file beserta dependency yang kita butuhkan adalah assembly plugin
+    - https://maven.apache.org/plugins/maven-assembly-plugin/usage.html
+    - Tidak hanya assemebly plugin, sebenarnya masih banyak plugin lain yang bisa kita gunakan untuk membuat distribution file di Maven
+    - Untuk membuat distribution file, kita bisa menggunakan perintah mvn package assembly:single
+
+
+konfigurasi assemblu plugin
+
+<build>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <plugin>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <version>3.7.1</version>
+          <configuration>
+            <descriptorRefs>
+              <descriptorRef>jar-with-dependencies</descriptorRef>
+            </descriptorRefs>
+            <archive>
+              <manifest>
+                <mainClass>dzaky.maven.App</mainClass>      ===> class utama (main class)
+              </manifest>
+            </archive>
+          </configuration>
+          <executions>
+            <execution>
+              <id>make-assembly</id> <!-- this is used for inheritance merges -->
+              <phase>package</phase> <!-- bind to the packaging phase -->
+              <goals>
+                <goal>single</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>

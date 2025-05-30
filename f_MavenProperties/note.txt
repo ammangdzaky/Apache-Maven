@@ -1,0 +1,3 @@
+MAVEN PROPERTIES
+    - Maven mendukung properties untuk menyimpan data konfigurasi
+    - Fitur ini akan sangat memudahkan kita kedepannya, dibandingkan melakukan hardcode di konfigurasi maven
