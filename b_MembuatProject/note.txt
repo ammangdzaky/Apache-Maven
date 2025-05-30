@@ -1,0 +1,9 @@
+ARCHETYPE
+    - Maven mendukung pembuatan berbagai macam project dengan mudah
+    - Pembuatan project maven menggunakan archetype, archetype adalah template project
+    - Kita bisa mengguanakn yang sudah disediakan oleh maven, atau bahkan bisa membuat template archetype sendiri
+
+
+MEMBUAT JAVA PROJECT
+    - mvn archetype:generate
+    - maven-archetype-quickstart
