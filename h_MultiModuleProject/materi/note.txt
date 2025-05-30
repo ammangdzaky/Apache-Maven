@@ -1,0 +1,11 @@
+MULTI MODULE PROJECT
+    - Saat aplikasi kita sudah sangat besar, kadang ada baiknya kita buat aplikasi dalam bentuk modular
+    - Misal kita pisahkan module model/data, view, service, repository, dan lain-lain
+    - Untungnya, Maven mendukung pembuatan prokect multi module
+
+
+MEMBUAT MODULE BARU
+    - Untuk membuat module baru, di dalam project yang sudah ada, kita hanya tinggal membuat folder baru, lalu menambahkan
+    setting pom.xml di folder tersebut
+    - Module harus memiliki parent, dimana parent adalah project diatas folder tersebut
+    - Selanjutnya, di parentnya pun , module harus di include
